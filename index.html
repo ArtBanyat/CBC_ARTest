@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Thonburi; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Thonburi; font-kerning: none}
+    span.s3 {font: 12.0px Helvetica; font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- </span><span class="s2">โหลดสคริปต์</span><span class="s1"> A-Frame </span><span class="s2">และ</span><span class="s1"> MindAR --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://aframe.io/releases/1.4.2/aframe.min.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!--<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">      </span></span><span class="s1">จุดที่</span><span class="s3"> 1: </span><span class="s1">กำหนดไฟล์รูปภาพที่จะใช้สแกน</span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">      </span>(</span><span class="s1">ต้องเป็นไฟล์นามสกุล</span><span class="s3"> .mind </span><span class="s1">ซึ่งดูวิธีแปลงไฟล์ได้ที่คำแนะนำด้านล่าง</span><span class="s3">)<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>--&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;a-scene mindar-image="imageTargetSrc: ./target.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false"&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-assets&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!--<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">          </span></span><span class="s1">จุดที่</span><span class="s3"> 2: </span><span class="s1">ใส่ชื่อไฟล์</span><span class="s3"> 3D </span><span class="s1">โมเดลของคุณ</span><span class="s3"> (</span><span class="s1">เช่น</span><span class="s3"> </span><span class="s1">ไฟล์กล่องพลาสติก</span><span class="s3"> .glb)<span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">          </span></span><span class="s1">นำไฟล์มาวางไว้ในโฟลเดอร์เดียวกันแล้วเปลี่ยนชื่อตรง</span><span class="s3"> src </span><span class="s1">ให้ตรงกัน</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a-asset-item id="myModel" src="./plaggy_cc0-pencil-566.glb"&gt;&lt;/a-asset-item&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a-assets&gt;</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-camera position="0 0 0" look-controls="enabled: false"&gt;&lt;/a-camera&gt;</span></p>
+<p class="p3"><span class="s1"></span><br></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">      </span>&lt;!-- </span><span class="s1">ส่วนนี้คือการนำโมเดลมาผูกกับรูปภาพที่สแกน</span><span class="s3"> --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;a-entity mindar-image-target="targetIndex: 0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!--<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span></span><span class="s2">จุดที่</span><span class="s1"> 3: </span><span class="s2">ปรับขนาด</span><span class="s1"> (scale) </span><span class="s2">หรือตำแหน่ง</span><span class="s1"> (position) </span><span class="s2">ของโมเดล</span><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">          </span></span><span class="s1">หากสแกนแล้วโมเดลใหญ่หรือเล็กไป</span><span class="s3"> </span><span class="s1">ให้มาเปลี่ยนตัวเลขตรง</span><span class="s3"> scale="1 1 1"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>--&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#myModel"&gt;&lt;/a-gltf-model&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/a-entity&gt;</span></p>
+<p class="p3"><span class="s1"><span class="Apple-converted-space">      </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/a-scene&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
