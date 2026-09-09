@@ -2,38 +2,34 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- โหลดสคริปต์ A-Frame และ MindAR -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <!-- 1. ไฟล์ target.mind นี้จะต้องถูก Compile ให้มีรูปภาพเป้าหมาย 3 รูปอยู่ข้างในไฟล์เดียว -->
+    <!-- 
+      จุดที่ 1: กำหนดไฟล์รูปภาพที่จะใช้สแกน 
+      (ต้องเป็นไฟล์นามสกุล .mind ซึ่งดูวิธีแปลงไฟล์ได้ที่คำแนะนำด้านล่าง) 
+    -->
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       
       <a-assets>
-        <!-- 2. นำเข้าไฟล์ 3D โมเดลทั้ง 3 ชิ้น (ตั้ง id ให้ต่างกัน) -->
-        <a-asset-item id="model1" src="./model-1.glb"></a-asset-item>
-        <a-asset-item id="model2" src="./model-2.glb"></a-asset-item>
-        <a-asset-item id="model3" src="./model-3.glb"></a-asset-item>
+        <!-- 
+          จุดที่ 2: ใส่ชื่อไฟล์ 3D โมเดลของคุณ (เช่น ไฟล์กล่องพลาสติก .glb) 
+          นำไฟล์มาวางไว้ในโฟลเดอร์เดียวกันแล้วเปลี่ยนชื่อตรง src ให้ตรงกัน
+        -->
+        <a-asset-item id="myModel" src="./firework.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <!-- 3. กำหนด Target ที่ 1 (สแกนรูปที่ 1 จะขึ้น model-1) -->
-      <!-- targetIndex: 0 คือรูปภาพลำดับแรกสุดในไฟล์ target.mind -->
+      <!-- ส่วนนี้คือการนำโมเดลมาผูกกับรูปภาพที่สแกน -->
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#model1"></a-gltf-model>
-      </a-entity>
-
-      <!-- 4. กำหนด Target ที่ 2 (สแกนรูปที่ 2 จะขึ้น model-2) -->
-      <!-- targetIndex: 1 คือรูปภาพลำดับที่สอง -->
-      <a-entity mindar-image-target="targetIndex: 1">
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#model2"></a-gltf-model>
-      </a-entity>
-
-      <!-- 5. กำหนด Target ที่ 3 (สแกนรูปที่ 3 จะขึ้น model-3) -->
-      <!-- targetIndex: 2 คือรูปภาพลำดับที่สาม -->
-      <a-entity mindar-image-target="targetIndex: 2">
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#model3"></a-gltf-model>
+        <!-- 
+          จุดที่ 3: ปรับขนาด (scale) หรือตำแหน่ง (position) ของโมเดล 
+          หากสแกนแล้วโมเดลใหญ่หรือเล็กไป ให้มาเปลี่ยนตัวเลขตรง scale="1 1 1"
+        -->
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#myModel"></a-gltf-model>
       </a-entity>
       
     </a-scene>
