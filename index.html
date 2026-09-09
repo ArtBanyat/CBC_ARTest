@@ -2,6 +2,20 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- === สคริปต์บังคับแก้ปัญหาถ่ายรูปไม่ติดโมเดล (Force Preserve Drawing Buffer) === -->
+    <!-- ต้องวางไว้ "ก่อน" โหลด A-Frame -->
+    <script>
+      (function() {
+        const originalGetContext = HTMLCanvasElement.prototype.getContext;
+        HTMLCanvasElement.prototype.getContext = function(type, attributes, ...args) {
+          if (type === 'webgl' || type === 'webgl2') {
+            attributes = attributes || {};
+            attributes.preserveDrawingBuffer = true; // บังคับให้เป็น true เสมอ
+          }
+          return originalGetContext.call(this, type, attributes, ...args);
+        };
+      })();
+    </script> 
     <!-- โหลดไลบรารี A-Frame และ MindAR -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
@@ -48,7 +62,7 @@
       
       <a-assets>
         <!-- เปลี่ยนชื่อไฟล์เป็น 3D โมเดลของคุณ (.glb) -->
-        <a-asset-item id="myModel" src="./plaggy_cc0-pencil-566.glb"></a-asset-item>
+        <a-asset-item id="myModel" src="./low_poly_light_bulb.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
