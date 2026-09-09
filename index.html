@@ -5,7 +5,6 @@
     <!-- โหลดสคริปต์ A-Frame และ MindAR -->
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
   </head>
   <body>
     <!-- 
@@ -19,7 +18,7 @@
           จุดที่ 2: ใส่ชื่อไฟล์ 3D โมเดลของคุณ (เช่น ไฟล์กล่องพลาสติก .glb) 
           นำไฟล์มาวางไว้ในโฟลเดอร์เดียวกันแล้วเปลี่ยนชื่อตรง src ให้ตรงกัน
         -->
-        <a-asset-item id="myModel" src="./firework.glb"></a-asset-item>
+        <a-asset-item id="myModel" src="./plaggy_cc0-pencil-566.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -30,7 +29,7 @@
           จุดที่ 3: ปรับขนาด (scale) หรือตำแหน่ง (position) ของโมเดล 
           หากสแกนแล้วโมเดลใหญ่หรือเล็กไป ให้มาเปลี่ยนตัวเลขตรง scale="1 1 1"
         -->
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#myModel" animation-mixer="loop: repeat"></a-gltf-model>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#myModel"></a-gltf-model>
       </a-entity>
       
     </a-scene>
