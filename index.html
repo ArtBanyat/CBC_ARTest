@@ -7,8 +7,8 @@
   </head>
   <body>
     <!-- 1. กำหนดไฟล์รูปภาพที่จะใช้สแกน (.mind) -->
-    <<!-- แก้ไขแท็ก a-scene บรรทัดนี้ -->
-<a-scene mindar-image="imageTargetSrc: ./targets.mind; uiScanning: no; uiLoading: no;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      
       <a-assets>
         <!-- 2. ใส่ชื่อไฟล์ 3D โมเดลของคุณ (.glb) -->
         <a-asset-item id="myModel" src="./plaggy_cc0-pencil-566.glb"></a-asset-item>
@@ -18,7 +18,7 @@
 
       <!-- 3. ปรับขนาด (scale) หรือตำแหน่ง (position) ของโมเดล -->
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="1 1 1" src="#myModel"></a-gltf-model>
+        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.5 0.5 0.5" src="#myModel"></a-gltf-model>
       </a-entity>
       
     </a-scene>
