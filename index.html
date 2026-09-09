@@ -7,11 +7,11 @@
   </head>
   <body>
     <!-- 1. กำหนดไฟล์รูปภาพที่จะใช้สแกน (.mind) -->
-    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
-      
+    <<!-- แก้ไขแท็ก a-scene บรรทัดนี้ -->
+<a-scene mindar-image="imageTargetSrc: ./target.mind; uiScanning: no; uiLoading: no;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
         <!-- 2. ใส่ชื่อไฟล์ 3D โมเดลของคุณ (.glb) -->
-        <a-asset-item id="myModel" src="./plaggy_cc0-pencil-566.glb"></a-asset-item>
+        <a-asset-item id="myModel" src="./firework.glb"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
